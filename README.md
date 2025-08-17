@@ -17,7 +17,7 @@ Automated log archiving solution with interactive flow visualization for product
 
 ### One-Line Installation
 ```bash
-git clone https://github.com/yourusername/log-archive-automation.git && cd log-archive-automation && sudo cp scripts/log-archive.sh /usr/local/bin/ && sudo chmod +x /usr/local/bin/log-archive.sh
+git clone https://github.com/kaushalacts/Archive-automation.git && cd archive-automation && sudo cp scripts/log-archive.sh /usr/local/bin/ && sudo chmod +x /usr/local/bin/log-archive.sh
 ```
 
 ### Setup Cron Job
@@ -32,7 +32,7 @@ sudo mkdir -p /opt/app/logs /var/log-archive
 
 ## 🎯 Interactive Diagram
 
-**👉 [View Live Interactive Process Flow](https://kaushalacts.github.io/log-archive-automation/web/)**
+**👉 [View Live Interactive Process Flow](https://kaushalacts.github.io/Archive-automation/)**
 
 The interactive diagram shows:
 - Complete automation workflow
