@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Archive Script Flow</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🔄 Log Archive Script Flow</h1>
+        <p>Interactive Diagram - Click on steps for details</p>
+    </div>
+
+    <div class="controls">
+        <button class="btn" onclick="startAnimation()">▶️ Start Process</button>
+        <button class="btn" onclick="resetAnimation()">🔄 Reset</button>
+        <button class="btn" onclick="simulateError()">⚠️ Simulate Error</button>
+    </div>
+
+    <div class="diagram-container">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="flow-diagram">
+            <!-- Steps -->
+            <div class="step step1" onclick="showInfo('start')" data-step="1">
+                🚀 Script Start
+            </div>
+
+            <div class="step step2" onclick="showInfo('lock')" data-step="2">
+                🔒 Lock Check
+            </div>
+
+            <div class="step step3 decision" onclick="showInfo('lock-decision')" data-step="3">
+                Lock Exists?
+            </div>
+
+            <div class="step step4" onclick="showInfo('lock-create')" data-step="4">
+                ✅ Create Lock
+            </div>
+
+            <div class="step step5" onclick="showInfo('validate')" data-step="5">
+                📁 Validate Directories
+            </div>
+
+            <div class="step step6" onclick="showInfo('check-logs')" data-step="6">
+                📄 Check Log Files
+            </div>
+
+            <div class="step step7" onclick="showInfo('archive')" data-step="7">
+                📦 Create Archive
+            </div>
+
+            <div class="step step8" onclick="showInfo('verify')" data-step="8">
+                ✅ Verify Archive
+            </div>
+
+            <div class="step step9" onclick="showInfo('cleanup')" data-step="9">
+                🧹 Cleanup Old Archives
+            </div>
+
+            <div class="step step10" onclick="showInfo('complete')" data-step="10">
+                🎉 Process Complete
+            </div>
+
+            <!-- Arrows -->
+            <div class="arrow arrow1"></div>
+            <div class="arrow arrow2"></div>
+            <div class="arrow arrow3"></div>
+            <div class="arrow arrow4"></div>
+            <div class="arrow arrow5"></div>
+            <div class="arrow arrow6"></div>
+            <div class="arrow arrow7"></div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #74b9ff, #0984e3);"></div>
+                <span>Process Step</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #fdcb6e, #e17055);"></div>
+                <span>Decision Point</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #00b894, #00a085);"></div>
+                <span>Active/Completed</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #e17055, #d63031);"></div>
+                <span>Error State</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-panel" id="infoPanel">
+        <h3 id="infoTitle">Step Information</h3>
+        <p id="infoDescription">Click on any step to see detailed information</p>
+    </div>
+
+    <div class="documentation-section">
+        <h2>📚 Project Documentation</h2>
+        <div class="doc-links">
+            <div class="doc-card">
+                <h3>📋 Installation Guide</h3>
+                <p>Step-by-step setup instructions</p>
+                <a href="https://github.com/kaushalacts/log-archive-automation/main/documents/installation.md" target="_blank">View Guide</a>
+            </div>
+            <div class="doc-card">
+                <h3>📖 Usage Documentation</h3>
+                <p>Manual testing and troubleshooting</p>
+                <a href="https://github.com/kaushalacts/log-archive-automation/main/documents/usage.md" target="_blank">View Docs</a>
+            </div>
+            <div class="doc-card">
+                <h3>💾 Source Code</h3>
+                <p>Complete script and examples</p>
+                <a href="https://github.com/kaushalacts/log-archive-automation" target="_blank">GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🔄 Log Archive Automation - Part of 100 Days Linux Challenge</p>
+        <p>Built with manual testing verification and production-ready features</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
