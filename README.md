@@ -33,37 +33,7 @@ sudo mkdir -p /opt/app/logs /var/log-archive
 ## 🎯 Interactive Diagram
 
 **👉 [View Live Interactive Process Flow](https://kaushalacts.github.io/Archive-automation/)**
-graph TD
-    A[🚀 Script Start] --> B[🔒 Check Lock File]
-    B --> C{🤔 Lock Exists?}
-    C -->|❌ Yes| D[🚫 Exit with Error]
-    C -->|✅ No| E[🔒 Create Lock File]
-    E --> F[📁 Validate Directories]
-    F --> G[📄 Check Log Files]
-    G --> H{📋 Files Found?}
-    H -->|❌ No| I[⚠️ Exit with Warning]
-    H -->|✅ Yes| J[📦 Create Archive]
-    J --> K[✅ Verify Archive]
-    K --> L{🔍 Archive Valid?}
-    L -->|❌ No| M[🗑️ Delete & Exit]
-    L -->|✅ Yes| N[🧹 Cleanup Old Archives]
-    N --> O[🗑️ Remove Source Logs]
-    O --> P[🔓 Remove Lock File]
-    P --> Q[🎉 Process Complete]
-    
-    %% Styling
-    classDef startEnd fill:#74b9ff,stroke:#0984e3,stroke-width:2px,color:#fff
-    classDef process fill:#00b894,stroke:#00a085,stroke-width:2px,color:#fff
-    classDef decision fill:#fdcb6e,stroke:#e17055,stroke-width:2px,color:#000
-    classDef error fill:#e17055,stroke:#d63031,stroke-width:2px,color:#fff
-    classDef warning fill:#f39c12,stroke:#e67e22,stroke-width:2px,color:#fff
-    
-    class A,Q startEnd
-    class B,E,F,G,J,K,N,O,P process
-    class C,H,L decision
-    class D,M error
-    class I warning
-
+ 
 The interactive diagram shows:
 - Complete automation workflow
 - Manual testing procedures  
